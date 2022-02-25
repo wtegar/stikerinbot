@@ -21,7 +21,7 @@ global.APIKeys = { // APIKey nya disini
   // 'https://website': 'apikey'
   'https://melcanz.com': 'DyotaMC05',
   'https://api.reysekha.my.id': 'apirey',
-  'https://bx-hunter.herokuapp.com': 'Ikyy69',
+  'https://bx-hunter.herokuapp.com': 'FuckBitch',
   'https://hardianto.xyz': 'hardianto',
   'https://api.neoxr.eu.org': 'yntkts',
   'https://api.chipa.xyz': 'pais',
