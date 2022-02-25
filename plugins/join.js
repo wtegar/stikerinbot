@@ -19,6 +19,6 @@ handler.help = ['join <chat.whatsapp.com>']
 handler.tags = ['tools']
 handler.command = /^join$/i
 
-handler.premium = false
+handler.premium = true
 
 module.exports = handler
