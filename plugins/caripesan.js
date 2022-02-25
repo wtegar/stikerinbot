@@ -1,5 +1,5 @@
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-    if (!text) throw `Pengunaan:\n${usedPrefix + command} <pesan>|<jumlah pesan>\n\ncontoh:\n${usedPrefix + command} stikerin|5`
+    if (!text) throw `Pengunaan:\n${usedPrefix + command} <pesan>|<jumlah pesan>\n\ncontoh:\n${usedPrefix + command} Ollie|5`
     let split = text.split`|`
     let result = await conn.searchMessages(split[0], m.chat, split[1] ? split[1] : 2, 1)
     if (result.messages.length > 0) {
