@@ -8,7 +8,7 @@ Pengunaan:
 ${usedPrefix + command} <bahasa> [teks]
 
 Contoh:
-${usedPrefix + command} id We are love Stikerin
+${usedPrefix + command} id We are love Ollie
 
 Daftar bahasa yang didukung:
 ${bahasa.map(v => `${v.code} : ${v.country}`).join`\n`}
