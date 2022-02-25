@@ -11,7 +11,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
   let json = await res.json()
   if (json.total_match = '0') throw `Tidak ditemukan!`
   let img = json.wallpapers[Math.floor(Math.random() * json.wallpapers.length)]
-  await conn.sendFile(m.chat, img.url_image, '', '© stikerin', m, 0, { thumbnail: Buffer.alloc(0) })
+  await conn.sendFile(m.chat, img.url_image, '', '© Ollie', m, 0, { thumbnail: Buffer.alloc(0) })
 }
 handler.help = ['wallpaperq <pencarian>']
 handler.tags = ['internet']
