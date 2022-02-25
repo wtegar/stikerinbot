@@ -15,13 +15,10 @@ const defaultMenu = {
 ├ %totalexp XP secara Total
 │ 
 ├ Tanggal: *%week %weton, %date*
-├ Tanggal Islam: *%dateIslamic*
 ├ Waktu: *%time*
 │
 ├ Uptime: *%uptime (%muptime)*
 ├ Database: %rtotalreg dari %totalreg
-├ Github:
-├ %github
 └────
 %readmore`.trimStart(),
   header: '┌─〔 %category 〕',
