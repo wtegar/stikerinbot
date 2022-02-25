@@ -13,7 +13,7 @@ let handler = async (m, { conn, command, usedPrefix, text }) => {
 Akses dengan mengetik namanya`.trim())
     else return await conn.sendButton(m.chat, `Berhasil menambahkan pesan '${text}'
     
-akses dengan ${usedPrefix}get${which} ${text}`, '© stikerin', 'Aktifkan', '.on getmsg', m)
+akses dengan ${usedPrefix}get${which} ${text}`, '© Ollie', 'Aktifkan', '.on getmsg', m)
 }
 handler.help = ['vn', 'msg', 'video', 'audio', 'img', 'stiker', 'gif'].map(v => 'add' + v + ' <teks>')
 handler.tags = ['database']
