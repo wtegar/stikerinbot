@@ -1,9 +1,9 @@
 const fetch = require('node-fetch')
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-    if (!text) throw `contoh:\n${usedPrefix + command} ariffb|amel`
+    if (!text) throw `contoh:\n${usedPrefix + command} Ucup|Ollie`
     let [nama1, nama2] = text.split(/[&|.]/i)
-    if (!nama1 || !nama2) throw `contoh:\n${usedPrefix + command} ariffb|amel`
+    if (!nama1 || !nama2) throw `contoh:\n${usedPrefix + command} Ucup|Ollie`
 
     let res = await fetch(global.API('zeks', '/api/primbonjodoh', { nama1, nama2 }, 'apikey'))
     if (!res.ok) throw eror
