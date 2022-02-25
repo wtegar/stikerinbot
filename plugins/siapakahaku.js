@@ -17,10 +17,10 @@ Timeout *${(timeout / 1000).toFixed(2)} detik*
 Ketik ${usedPrefix}who untuk bantuan
 `.trim()
     conn.siapakahaku[id] = [
-        await conn.sendButton(m.chat, caption, '© stikerin', 'Bantuan', '.who', m),
+        await conn.sendButton(m.chat, caption, '© Ollie', 'Bantuan', '.who', m),
         json, poin,
         setTimeout(() => {
-            if (conn.siapakahaku[id]) conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.jawaban}*`, '© stikerin', 'Siapakah Aku', '.siapaaku', conn.siapakahaku[id][0])
+            if (conn.siapakahaku[id]) conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.jawaban}*`, '© Ollie', 'Siapakah Aku', '.siapaaku', conn.siapakahaku[id][0])
             delete conn.siapakahaku[id]
         }, timeout)
     ]
