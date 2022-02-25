@@ -1,6 +1,6 @@
 // NurNurz
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-  if (!text) throw `Penggunaan:\n${usedPrefix + command} <teks>\n\nContoh:\n${usedPrefix + command} stikerin`
+  if (!text) throw `Penggunaan:\n${usedPrefix + command} <teks>\n\nContoh:\n${usedPrefix + command} Ollie`
   try {
     await conn.updateProfileName(text)
     m.reply('Berhasil!')
