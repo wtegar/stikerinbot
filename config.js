@@ -25,7 +25,7 @@ global.APIKeys = { // APIKey nya disini
   'https://hardianto.xyz': 'hardianto',
   'https://api.neoxr.eu.org': 'yntkts',
   'https://api.chipa.xyz': 'pais',
-  'https://api.xteam.xyz': 'apikeymu',
+  'https://api.xteam.xyz': 'Dawnfrostkey',
   'https://api.zeks.me': 'a2DVFau41a6IOsBRRSHNewHJf2i',
 }
 
