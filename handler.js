@@ -453,7 +453,7 @@ module.exports = {
 Terdeteksi @${m.participant.split`@`[0]} telah menghapus pesan
 
 ketik *.on delete* untuk mematikan pesan ini
-`.trim(), '© stikerin', 'Matikan Antidelete', ',on delete', m.message)
+`.trim(), '© Ollie', 'Matikan Antidelete', ',on delete', m.message)
     this.copyNForward(m.key.remoteJid, m.message).catch(e => console.log(e, m))
   },
   async onCall(json) {
@@ -486,7 +486,7 @@ ketik *.on delete* untuk mematikan pesan ini
 
     ${desc} 
         `.trim()
-    this.sendButton(jid, caption, '© stikerin', 'Matikan', ',off desc')
+    this.sendButton(jid, caption, '© Ollie', 'Matikan', ',off desc')
 
   }
 }
