@@ -7,7 +7,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
   conn.sendButtonImg(m.chat, json.url, 'Waifu', '© Ollie', 'Waifu', usedPrefix + command, m)
 }
 handler.help = ['waifu']
-handler.tags = ['internet']
+handler.tags = ['anime']
 handler.command = /^(waifu)$/i
 
 module.exports = handler
