@@ -25,14 +25,14 @@ const defaultMenu = {
   body: '├ %cmd %islimit %isPremium',
   footer: '└────\n',
   after: `
-*%npmname@^%version*
+  
 ${'```%npmdesc```'}
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   let tags
   let teks = `${args[0]}`.toLowerCase()
-  let arrayMenu = ['all', 'game', 'xp', 'stiker', 'kerangajaib', 'quotes', 'admin', 'grup', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'quran', 'audio', 'jadibot', 'info', 'tanpakategori', 'owner']
+  let arrayMenu = ['all', 'game', 'xp', 'stiker', 'kerangajaib', 'quotes', 'admin', 'grup', 'premium', 'internet', 'Anime', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'quran', 'audio', 'jadibot', 'info', 'tanpakategori', 'owner']
   if (!arrayMenu.includes(teks)) teks = '404'
   if (teks == 'all') tags = {
     'main': 'Utama',
@@ -45,6 +45,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     'group': 'Grup',
     'premium': 'Premium',
     'internet': 'Internet',
+    'anime': 'Anime'
     'anonymous': 'Anonymous Chat',
     'nulis': 'MagerNulis & Logo',
     'downloader': 'Downloader',
@@ -85,6 +86,9 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   }
   if (teks == 'internet') tags = {
     'internet': 'Internet'
+  }
+  if (teks == 'anime') tags = {
+    'anime': 'Anime'
   }
   if (teks == 'anonymous') tags = {
     'anonymous': 'Anonymous Chat'
@@ -234,6 +238,10 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                   "title": "Internet",
                   "description": "",
                   "rowId": `${_p}? internet`
+                }, {
+                  "title": "Anime",
+                  "description": "",
+                  "rowId": `${_p}? anime`
                 }, {
                   "title": "Anonymous",
                   "description": "",
