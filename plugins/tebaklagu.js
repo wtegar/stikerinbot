@@ -21,10 +21,10 @@ Timeout *${(timeout / 1000).toFixed(2)} detik*
 Ketik *${usedPrefix}cek* untuk bantuan
 Bonus: ${poin} XP`.trim()
     conn.tebaklagu[id] = [
-        await conn.sendButton(m.chat, caption, '© stikerin', 'Bantuan', `.cek`, m),
+        await conn.sendButton(m.chat, caption, '© Ollie', 'Bantuan', `.cek`, m),
         json, poin,
         setTimeout(() => {
-            if (conn.tebaklagu[id]) conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.judul}*`, '© stikerin', 'Tebak Lagu', `.tebaklagu`, conn.tebaklagu[id][0])
+            if (conn.tebaklagu[id]) conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.judul}*`, '© Ollie', 'Tebak Lagu', `.tebaklagu`, conn.tebaklagu[id][0])
             delete conn.tebaklagu[id]
         }, timeout)
     ]
