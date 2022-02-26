@@ -16,7 +16,8 @@ let handler = async (m, { conn, usedPrefix }) => {
     let json = await res.json()
     if (!json.status) throw json
     let caption = `
-Balas audionya kamu mau jawab
+*TEBAKLAGU!*
+Balas pesan ini menjawab
 Timeout *${(timeout / 1000).toFixed(2)} detik*
 Ketik *${usedPrefix}cek* untuk bantuan
 Bonus: ${poin} XP`.trim()
