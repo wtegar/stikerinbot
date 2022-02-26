@@ -25,14 +25,14 @@ const defaultMenu = {
   body: '├ %cmd %islimit %isPremium',
   footer: '└────\n',
   after: `
-  
+*%npmname@^%version*
 ${'```%npmdesc```'}
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   let tags
   let teks = `${args[0]}`.toLowerCase()
-  let arrayMenu = ['all', 'game', 'xp', 'stiker', 'kerangajaib', 'quotes', 'admin', 'grup', 'premium', 'internet', 'Anime', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'quran', 'audio', 'jadibot', 'info', 'tanpakategori', 'owner']
+  let arrayMenu = ['all', 'game', 'xp', 'stiker', 'kerangajaib', 'quotes', 'admin', 'grup', 'premium', 'internet', 'nsfw', 'anime', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'quran', 'audio', 'jadibot', 'info', 'tanpakategori', 'owner']
   if (!arrayMenu.includes(teks)) teks = '404'
   if (teks == 'all') tags = {
     'main': 'Utama',
@@ -45,7 +45,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     'group': 'Grup',
     'premium': 'Premium',
     'internet': 'Internet',
-    'anime': 'Anime'
+    'anime': 'Anime',
+    'nsfw': 'nsfw',
     'anonymous': 'Anonymous Chat',
     'nulis': 'MagerNulis & Logo',
     'downloader': 'Downloader',
@@ -89,6 +90,9 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   }
   if (teks == 'anime') tags = {
     'anime': 'Anime'
+  }
+  if (teks == 'nsfw') tags = {
+    'nsfw': 'nsfw'
   }
   if (teks == 'anonymous') tags = {
     'anonymous': 'Anonymous Chat'
@@ -190,7 +194,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
         "listMessage": {
           "title": `${ucapan()}, ${name}`.trim(),
-          "description": "© Ollie",
+          "description": "\n\n© Ollie",
           "buttonText": "Klik Disini",
           "listType": "SINGLE_SELECT",
           "sections": [
@@ -242,6 +246,10 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                   "title": "Anime",
                   "description": "",
                   "rowId": `${_p}? anime`
+                }, {
+                  "title": "Nsfw",
+                  "description": "",
+                  "rowId": `${_p}? nsfw`
                 }, {
                   "title": "Anonymous",
                   "description": "",
@@ -382,7 +390,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send2ButtonLoc(m.chat, await (await fetch(fla + teks)).buffer(), text.trim(), 'made with ❤️ by Ucup', 'Pemilik Bot', `${_p}owner`, 'Donasi', `${_p}donasi`, m)
+    await conn.send2ButtonLoc(m.chat, await (await fetch(fla + teks)).buffer(), text.trim(), 'made with ❤️ by ucup', 'Pemilik Bot', `${_p}owner`, 'Donasi', `${_p}donasi`, m)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
