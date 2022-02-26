@@ -24,7 +24,7 @@ let handler = async (m, { conn, args, isPrems, isOwner, usedPrefix, command }) =
     return conn.sendButton(m.chat, 'Server Error', '', 'Coba Lagi', `${usedPrefix + command} ${args[0]}`)
   }
 }
-handler.help = ['mp4', 'v', ''].map(v => 'yt' + v + ` <url> [server: ${servers.join(', ')}]`)
+handler.help = ['mp4', 'v', ''].map(v => 'yt' + v + ` <url> `)
 handler.tags = ['downloader']
 handler.command = /^yt(v|mp4)?$/i
 
