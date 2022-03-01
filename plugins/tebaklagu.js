@@ -10,7 +10,7 @@ let handler = async (m, { conn, usedPrefix }) => {
      * silahkan tambahkan sendiri playlistnya
      * ['id', 'id', 'dan seterusnya']
      */
-    let playlist = ['54x8JOGGlOCQNM43hbnt4L']
+    let playlist = ['4gbfPIrjondY6MkPfcZpLZ']
     let res = await fetch(API('amel', '/tebaklagu', { id: conn.pickRandom(playlist) }, 'apikey'))
     if (!res.ok) throw res.status
     let json = await res.json()
