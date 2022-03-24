@@ -11,7 +11,7 @@ let handler = async (m, { conn, usedPrefix }) => {
      * ['id', 'id', 'dan seterusnya']
      */
     let playlist = ['4gbfPIrjondY6MkPfcZpLZ']
-    let res = await fetch(API('xteam', '/game/tebaklagu/', { id: conn.pickRandom(playlist) }, 'apikey'))
+    let res = await fetch(API('amel', '/tebaklagu', { id: conn.pickRandom(playlist) }, 'apikey'))
     if (!res.ok) throw res.status
     let json = await res.json()
     if (!json.status) throw json
