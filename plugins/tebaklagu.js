@@ -10,7 +10,7 @@ let handler = async (m, { conn, usedPrefix }) => {
      * silahkan tambahkan sendiri playlistnya
      * ['id', 'id', 'dan seterusnya']
      */
-    let playlist = ['4gbfPIrjondY6MkPfcZpLZ']
+    let playlist = ['4gbfPIrjondY6MkPfcZpLZ?si']
     let res = await fetch(API('amel', '/tebaklagu', { id: conn.pickRandom(playlist) }, 'apikey'))
     if (!res.ok) throw res.status
     let json = await res.json()
@@ -20,7 +20,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 Balas pesan ini untuk menjawab
 Timeout *${(timeout / 1000).toFixed(2)} detik*
 Ketik *${usedPrefix}cek* untuk bantuan
-Bonus: ${poin} XP`.trim()
+//Bonus: ${poin} XP`.trim()
     conn.tebaklagu[id] = [
         await conn.sendButton(m.chat, caption, '© Ollie', 'Bantuan', `.cek`, m),
         json, poin,
@@ -31,10 +31,10 @@ Bonus: ${poin} XP`.trim()
     ]
     await conn.sendFile(m.chat, json.preview, 'eror.mp3', '', m, 1, { mimetype: 'audio/mp4' })
 }
-handler.help = ['tebaklagu']
-handler.tags = ['game']
+//handler.help = ['tebaklagu']
+//handler.tags = ['game']
 handler.command = /^tebaklagu$/i
 
-handler.game = true
+//handler.game = true
 
 module.exports = handler
