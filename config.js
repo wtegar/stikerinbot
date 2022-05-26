@@ -19,7 +19,7 @@ global.APIs = { // API Prefix
 }
 global.APIKeys = { // APIKey nya disini
   // 'https://website': 'apikey'
-  'https://melcanz.com': 'DyotaMC05',
+  'https://melcanz.com': 'melcantik',
   'https://api.reysekha.my.id': 'apirey',
   'https://bx-hunter.herokuapp.com': 'FuckBitch',
   'https://hardianto.xyz': 'hardianto',
